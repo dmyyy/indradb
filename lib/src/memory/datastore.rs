@@ -1,4 +1,8 @@
-use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
+#[cfg(feature = "indextree")]
+use indexset::{BTreeMap, BTreeSet};
+#[cfg(not(feature = "indextree"))]
+use std::collections::{BTreeMap, BTreeSet};
+use std::collections::{HashMap, HashSet};
 use std::fs::File;
 use std::io::{BufReader, BufWriter};
 use std::path::PathBuf;
