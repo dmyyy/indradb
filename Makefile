@@ -13,7 +13,7 @@ test-lib-coverage:
 		--exclude-files '../*' --exclude-files 'fuzz'
 
 bench:
-	cd lib && cargo +nightly bench --features=bench-suite,rocksdb-datastore $(TEST_NAME)
+	cd lib && cargo +nightly bench --features=bench-suite,rocksdb-datastore,indextree $(TEST_NAME)
 
 fuzz:
 	cd lib && cargo +nightly fuzz run compare
