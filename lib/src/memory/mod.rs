@@ -3,6 +3,7 @@
 //! can fit in-memory, and data is only persisted to disk when explicitly
 //! requested.
 
+mod csr_datastore;
 mod datastore;
 
 pub use datastore::MemoryDatastore;
